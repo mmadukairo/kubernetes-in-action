@@ -27,7 +27,7 @@ jobs:
 
     - name: Build, tag, and push image to Amazon ECR
       run: |
-        docker build -t clo835-week3-1 .
+        docker build -t clo835-week3-1 -f week2/simple-webapp-flask/Dockerfile week2/simple-webapp-flask
         docker tag clo835-week3-1:latest 149333603185.dkr.ecr.us-east-1.amazonaws.com/clo835-week3-1
         docker push 149333603185.dkr.ecr.us-east-1.amazonaws.com/clo835-week3-1
 
